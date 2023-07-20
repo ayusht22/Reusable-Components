@@ -26,7 +26,7 @@ function App() {
       <div style={{borderTop:'10px'}}>
         {
           componentsId.map(
-            (data,id)=> <CustomContainer key={id} ind={data} setDisplayButton={{setDisplayButton}} displayButton={displayButton}></CustomContainer>
+            (data,id)=> <CustomContainer key={id} ind={data} setDisplayButton={setDisplayButton} displayButton={displayButton}></CustomContainer>
             
           )
         }

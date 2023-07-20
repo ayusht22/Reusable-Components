@@ -6,15 +6,16 @@ function CustomContainer({ind,displayButton,setDisplayButton}) {
   
   console.log(ind)
   const handleClick=(e)=>{
-    e.preventDefualt();
+    e.preventDefault();
     setDisplayButton(!displayButton);
   };
 
   return (
     
     <div style={{color:'blue',borderColor:'blue',marginBottom:'3px',borderStyle:'solid',float:'left',width:'50%'}}>
-    {ind==='2'?<Checkbox onClick={(e)=>handleClick(e)}></Checkbox>:null}
-    <div>{{ind}}</div>
+
+    {ind===2?<Checkbox onClick={(e)=>handleClick(e)}></Checkbox>:null}
+
     container
     </div>
     
