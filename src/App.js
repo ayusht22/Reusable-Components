@@ -5,11 +5,13 @@ import axios from 'axios';
 import { useState,useEffect } from 'react';
 function App() {
   
-  const [displayButton,setDisplayButton]=useState(false);
-  const [componentsId,setComponentsId]=useState([2,3,4,5,6]);
+  const [displayButton,setDisplayButton]=useState(false);     
+  const [componentsId,setComponentsId]=useState([2,3,4,5,6]); //5 customizable componenets apart from the fixed one 
+  const [check,setCheck]=useState(false);// stores the input of the user 
 
   const handleClick=((e)=>{
     e.preventDefault();
+    setCheck(true)
     setDisplayButton(false);
   })
 
@@ -22,7 +24,7 @@ function App() {
       {
         displayButton?<button onClick={handleClick}>Submit</button>:null
       }
-      <CustomContainer></CustomContainer>
+      <CustomContainer></CustomContainer>   
       <div style={{borderTop:'10px'}}>
         {
           componentsId.map(
